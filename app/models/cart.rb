@@ -9,8 +9,8 @@ class Cart < ActiveRecord::Base
       item.quantity += 1
     else
       item = self.line_items.build(item_id: item_id)
-    end
-    item  #returns item for saving to pass test
+    end #returns item for saving to pass test
+    item
   end
 
   def total
